@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Casimo</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+    font-family: 'Georgia', serif;
+    background-color: white;
+    color: black;
+  }
+    header {
+      background: url('hero-image.jpg') no-repeat center center/cover;
+      height: 100vh;
+      position: relative;
+      color: white;
+    }
+
+    nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 80px;
+    border-bottom: 1px solid #ddd;
+    background-color: white;
+    }
+    
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #ff6600;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #000000;
+      font-weight: 500;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover, nav ul li a.active {
+      color: #ff6600;
+      font-style: bold;
+      font-weight: 600;
+    }
+   
+    .hero-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      max-width: 800px;
+    }
+    .hero-content h1 {
+      font-family: 'Georgia', serif;
+      font-size: 64px;
+      line-height: 1.2;
+    }
+    .hero-content p {
+      font-size: 16px;
+      margin: 20px 0;
+      color: #e0e0e0;
+    }
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    .hero-buttons .btn {
+      padding: 12px 30px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease; 
+      a {
+    text-decoration: none;
+    color: #ffffff;
+    }
+    }
+
+    .btn.primary {
+      background: #ff6600;
+      color: rgb(255, 255, 255);
+      border: none;
+    }
+    .btn.secondary {
+      background: transparent;
+      color: white;
+      border: 1px solid white;
+    }
+    
+    .header-buttons {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .badge {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      background-color: rgb(0, 0, 0);
+      color: white;
+      font-size: 12px;
+      padding: 2px 6px;
+      border-radius: 50%;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Casimo</div>
+      <ul>
+        <li><a href="homepage.html" class="active">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="aboutus.html">About us</a></li>
+        <li><a href="reservation.html">Reservation</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contactus.html">Contact us</a></li>
+      </ul>
+      
+    </nav>
+    <div class="overlay1"></div>
+    <div class="hero-content">
+      <h1>Enjoy healthy and <br> delicious food.</h1>
+      <p>Savor meals that are not only bursting with flavor but are made with fresh, wholesome ingredients to nourish your soul.
+
+      </p>
+      <div class="hero-buttons">
+        <button class="btn primary"><a href="menu.html">Order Now</a></button>
+        <button class="btn secondary"><a href="reservation.html">Reservation</a></button>
+      </div>
+    </div>
+  </header>
+  
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <section class="about">
+    <div class="about-section">
+      <div class="about-left">
+        <h4>About Us</h4>
+        <h1>Where Taste Meets<br>Excellence Services.</h1>
+      </div>
+      <div class="about-right">
+        <p>
+          Welcome to Casimo, where the essence of fine dining meets a warm, welcoming atmosphere.
+          Our journey began with a simple mission — to serve food that delights the senses and creates
+          memorable experiences. From handpicked ingredients to world-class chefs, every element of
+          our restaurant is thoughtfully curated. Whether you're here for a cozy dinner, a family celebration,
+          or a business lunch, our team ensures top-tier service, culinary artistry, and a comforting ambiance.
+        </p>
+        <p>
+          We believe food is more than just sustenance — it’s an experience. That’s why we focus on
+          authenticity, creativity, and quality in every dish. Our menu reflects a blend of tradition and
+          innovation, crafted to please every palate.
+        </p>
+        <a href="menu.html" class="menu-btn">See our Menu →</a>
+      </div>
+    </div>
+  </section>
+  <section class="menu-section">
+    <div class="menu-header">
+      <h1>Our Bestsellers</h1>
+      <p>Explore the dishes our guests can’t stop talking about — handcrafted with flavor, passion, and a touch of culinary magic.</p>
+    </div>
+
+    <div class="menu-items">
+      <div class="menu-card">
+        <img src="Spaghetti.jpg" alt="Spaghetti" />
+        <h2>Spaghetti <span>$14.50</span></h2>
+      </div>
+      <div class="menu-card">
+        <img src="gnocchi.avif" alt="Gnocchi" />
+        <h2>Gnocchi <span>$18.00</span></h2>
+      </div>
+      <div class="menu-card">
+        <img src="ravioli.jpg" alt="Ravioli" />
+        <h2>Ravioli <span>$12.50</span></h2>
+      </div>
+      <div class="menu-card">
+        <img src="Tuna-Sushi.jpg" alt="Tuna Sushi" />
+        <h2>Tuna Sushi <span>$16.00</span></h2>
+      </div>
+      <div class="menu-card">
+        <img src="pizza.webp" alt="pizza" />
+        <h2>Pizza <span>$20.50</span></h2>
+      </div>
+      <div class="menu-card">
+        <img src="sandwich.webp" alt="Sandwich" />
+        <h2>Sandwich <span>$17.50</span></h2>
+      </div>
+      <div class="menu-card">
+        <img src="Risotto.jpg" alt="Rissoto" />
+        <h2>Rissoto <span>$13.50</span></h2>
+      </div>
+      <div class="menu-card">
+        <img src="veg sushi.jpg" alt="Veg Sushi" />
+        <h2>Veg Sushi <span>$14.50</span></h2>
+      </div>
+      <div class="menu-card">
+        <img src="burger.jpg" alt="Burger" />
+        <h2>Burger<span>$18.50</span></h2>
+      </div>
+      <div class="menu-card">
+        <img src="soup.avif" alt="soup" />
+        <h2>Veg Soup<span>$12.50</span></h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="reservation-section">
+    <div class="reservation-text">
+      <p class="section-label">— RESERVATION</p>
+      <h1>Let’s reserve a table</h1>
+      <p class="desc">
+        Planning a special evening or a casual lunch? Reserving your table at Casimo is simple and seamless. Whether you're dining solo, with your partner, or bringing a whole group, we’ve got the perfect spot for you. Our elegant yet cozy environment is designed to elevate every occasion — be it birthdays, anniversaries, corporate meetups, or just a night out to indulge in great food.      </p>
+      <p class="desc">
+        Prefer the corner by the window or closer to the music? Let us know your preferences and we’ll take care of the rest. Our staff is here to ensure that your experience is as effortless as it is enjoyable.      </p>
+      <a href="menu.html" class="btnreserve">See our Menu →</a>
+    </div>
+  </section>
+
+  <section class="reserveation-image">
+    <img src="RESERVATION IMAGE.jpg" alt="Dining Table"/>
+  </section>
+
+  <section class="team-section">
+    <div class="team-header">
+      <h2>Meet our best team</h2>
+      <p>We’re a team of passionate chefs, skilled servers, and creative minds dedicated to bringing you unforgettable dining experiences every day.</p>
+    </div>
+
+    <div class="team-grid">
+      <div class="team-member">
+        <img src="headchef.jpg" alt="Esther Howard"/>
+        <p>Esther Howard</p>
+        <span>HEAD CHEF</span>
+      </div>
+      <div class="team-member">
+        <img src="chef wade.jpg" alt="Wade Warren"/>
+        <p>Wade Warren</p>
+        <span>CHEF</span>
+      </div>
+      <div class="team-member">
+        <img src="chef robert.jpeg" alt="Robert Fox"/>
+        <p>Robert Fox</p>
+        <span>CHEF</span>
+      </div>
+      <div class="team-member">
+        <img src="chef leslie.jpg" alt="Leslie Alexander"/>
+        <p>Leslie Alexander</p>
+        <span>CHEF</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="offer-section">
+    <div class="card">
+      <img src="burger.jpg" alt="Burger">
+      <div class="card-content">
+        <p>Today's Special</p>
+        <h3>Delicious<br>Food</h3>
+        <a href="menu.html" class="btn">Explore More</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="pizza card.jpg" alt="Pizza">
+      <div class="card-content">
+    
+        <p>Today's Special</p>
+        <h3>Delicious<br>Food</h3>
+        <a href="menu.html" class="btn">Explore More</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonial-section">
+    <div class="testimonial-header">
+      <h2>Our customers say</h2>
+      <p>We believe the best measure of our food and service is the words of those who’ve dined with us. Here's what our happy customers have to say about their Casimo experience.</p>
+    </div>
+
+    <div class="testimonial-controls">
+      <button class="arrow-btn">&#x2039;</button>
+      <button class="arrow-btn">&#x203A;</button>
+    </div>
+
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <p>“From start to finish, this place was amazing! The food was both innovative and comforting, with generous portions and top-notch quality. The atmosphere was stylish and chic, yet cozy enough for a relaxed meal. The service was impeccable—friendly and efficient without being intrusive. This is a must-visit for any food lover!”</p>
+        <div class="testimonial-profile">
+            <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Wade Warren">
+          <div>
+            <h4>Brooklyn Simmons</h4>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <p>“A true foodie’s paradise! The diverse menu had something for everyone, and every dish we tried was bursting with flavor. The staff was incredibly welcoming, adding to the overall experience. The ambiance was relaxed yet sophisticated, making it perfect for both casual and special occasions. We’ll definitely be back for more.”</p>
+        <div class="testimonial-profile">
+            <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Esther Howard">
+          <div>
+            <h4>Leslie Alexander</h4>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <p>“Amazing food, impeccable service, and a fantastic atmosphere! The ingredients were fresh, and the dishes had exciting blend of traditional and modern flavors. The restaurant’s decor added to experience, creating a chic yet comfortable space. The team made us feel special from the moment we walked in. Highly recommend!”</p>
+        <div class="testimonial-profile">
+            <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Jenny Wilson">
+          <div>
+            <h4>Jenny Wilson</h4>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="contact-section">
+    <div class="overlay">
+      <div class="contact-info">
+        <h2>Contact Us</h2>
+        <p>(704) 555-0127</p>
+        <p>info@casimo.com</p>
+        <p>12 Parker Rd. downtown, New India</p>
+        <button class="btn">
+          Contact Us <i class="fas fa-phone-alt"></i>
+        </button>
+      </div>
+
+      <div class="open-hours">
+        <h2>We are open from</h2>
+        <p>Monday–Sunday</p>
+        <p>Lunch : Mon–Sun : 11:00am–02:00pm</p>
+        <p>Dinner : sunday : 04:00pm–08:00pm</p>
+        <button class="btn">
+          Reservation <i class="fas fa-check-circle"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="feature">
+      <img src="foodquality.png" alt="Quality Food">
+      <div>
+        <h3>Quality Food</h3>
+        <p>Every dish is crafted using premium ingredients to ensure top-notch taste and presentation, made with love and authenticity.</p>
+      </div>
+    </div>
+    <div class="feature">
+      <img src="organic.png" alt="100% Organic Guarantee">
+      <div>
+        <h3>100% Organic Guarantee</h3>
+        <p>Our ingredients are locally sourced and 100% organic—free from harmful additives and full of natural goodness.</p>
+      </div>
+    </div>
+    <div class="feature">
+      <img src="timing.png" alt="Fast Delivery">
+      <div>
+        <h3>Fast Delivery</h3>
+        <p>From kitchen to doorstep, enjoy your favorite meals delivered hot and fresh in record time.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-column logo-section">
+      <div class="logo2">
+        <span>Casimo</span>
+      </div>
+      <p>We are dedicated to crafting memorable dining experiences that indulge the senses and delight the palate explore. our restaurant blends charm, modern elegance with a passion for Italian cuisine flavors whether you're joining us for a casual lunch or a celebration with friends, our team is committed to your visit is nothing short of exceptional.</p>
+    </div>
+
+    <div class="footer-column">
+      <h4>Pages</h4>
+      <ul>
+        <li>Home</li>
+        <li>Menu</li>
+        <li>Order online</li>
+        <li>Catering</li>
+        <li>Reservation</li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Information</h4>
+      <ul>
+        <li>About us</li>
+        <li>Testimonials</li>
+        <li>Event</li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Get in touch</h4>
+      <div class="social-icons">
+        <span class="icon"><img src="facebook-logo.png" alt="facebook"></span>
+        <span class="icon"><img src="instagram.png" alt="insta"></span>
+        <span class="icon"><img src="social-media.png" alt="twitter"></span>
+      </div>
+      <div class="subscribe">
+        <input type="email" placeholder="Enter email address">
+        <button>Subscribe</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-credit">
+    <p>@Rishika Jain</p>
+  </div>
+</footer>
+
+</body>
+</html>

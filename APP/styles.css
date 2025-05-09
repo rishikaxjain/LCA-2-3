@@ -1,0 +1,610 @@
+.overlay1 {
+  width: 100%;
+  height: 91%;
+  background-color: rgba(0, 0, 0, 0.6); /* dark overlay for contrast */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 6rem;
+}
+
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-left {
+  flex: 0.3;
+}
+
+.about-left h4 {
+  text-transform: uppercase;
+  font-weight: semibold;
+  letter-spacing: 1.5px;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.about-left h4::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  background-color: #000;
+  left: -50px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.about-left h1 {
+  font-size: 2.5rem;
+  line-height: 1.3;
+}
+
+.about-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+  position: relative;
+}
+
+.about-right p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+.menu-btn {
+  align-self: flex-end;
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #000;
+  padding: 0.6rem 1.4rem;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.menu-btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.menu-section {
+    max-width: 1200px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 0 20px;
+  }
+  
+  .menu-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  
+  .menu-header p {
+    color: #555;
+    font-size: 16px;
+    max-width: 700px;
+    margin: 0 auto 40px;
+  }
+  
+  .menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    justify-items: center;
+  }
+  
+  .menu-card {
+    width: 100%;
+    max-width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .menu-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1.1;
+    border-radius: 50% / 35%;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  .menu-card h2 {
+    margin: 15px 0 10px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .menu-card h2 span {
+    font-weight: 400;
+    color: #666;
+    margin-left: 6px;
+  }
+  
+  .menu-card button {
+    padding: 10px 20px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 999px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .menu-card button:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .menu-card button span {
+    margin-left: 8px;
+    font-weight: bold;
+  }
+  .reservation-section {
+    padding: 60px 80px;
+    background-color: #fff;
+  }
+  
+  .section-label {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+  }
+  
+  .reservation-text h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .reservation-text .desc {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 15px;
+    max-width: 700px;
+  }
+  
+  .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 18px;
+    border: 1px solid #111;
+    text-decoration: none;
+    color: #111;
+    border-radius: 25px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #111;
+    color: #fff;
+  }
+  
+  .reserveation-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .team-section {
+    padding: 60px 80px;
+    text-align: center;
+    background-color: #fff;
+  }
+  
+  .team-header h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .team-header p {
+    color: #666;
+    font-size: 14px;
+    max-width: 600px;
+    margin: 0 auto 40px;
+  }
+  
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+  }
+  
+  .team-member {
+    text-align: center;
+  }
+  
+  .team-member img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .team-member p {
+    font-weight: 500;
+    margin-top: 10px;
+  }
+  
+  .team-member span {
+    font-size: 13px;
+    color: #999;
+  }
+
+  .team-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+
+  .offer-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #000;
+  }
+
+  .card {
+    width: 48%;
+    background-color: #000;
+    color: #fff;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  .card-content {
+    padding: 20px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+
+    .card-content h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 24px;
+        font-weight: 700;
+        color: #f4f2f0;
+    }
+
+  .card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #f4f2f0;
+    margin: 10px 0;
+  }
+
+  .btnreserve {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #111;
+    border-radius: 20px;
+    margin-top: 10px;
+    font-size: 14px;
+    text-decoration: none;
+  }
+
+  .btn::after {
+    content: '\2192';
+  }
+
+  .testimonial-section {
+    padding: 60px 80px;
+    position: relative;
+  }
+  
+  .testimonial-header {
+    text-align: left;
+    max-width: 700px;
+  }
+  
+  .testimonial-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .testimonial-header p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  .testimonial-controls {
+    position: absolute;
+    top: 60px;
+    right: 80px;
+  }
+  
+  .arrow-btn {
+    font-size: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .arrow-btn:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+  }
+  
+  .testimonial-card {
+    background-color: #fff;
+    border: 1px solid #eaeaea;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+    transition: transform 0.3s ease;
+  }
+  
+  .testimonial-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .testimonial-card p {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .testimonial-profile {
+    display: flex;
+    align-items: center;
+  }
+  
+  .testimonial-profile img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 12px;
+    object-fit: cover;
+  }
+  
+  .testimonial-profile h4 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  
+  .stars {
+    font-size: 14px;
+    color: #f6b01e;
+  }
+
+  @media(max-width: 768px) {
+    .hero-section {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .card {
+      width: 100%;
+    }
+
+    .testimonial-cards {
+      flex-direction: column;
+    }
+
+    .testimonial {
+      flex: 1 1 100%;
+    }
+  }
+  .contact-section {
+    background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836') no-repeat center center/cover;
+    height: 100vh;
+    position: relative;
+    color: white;
+  }
+
+
+  .overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* dark overlay for contrast */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 6rem;
+  }
+  
+  .contact-info, .open-hours {
+    max-width: 40%;
+  }
+  
+  .contact-info h2,
+  .open-hours h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-info p,
+  .open-hours p {
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+  }
+  
+  .btn {
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.8rem;
+    font-size: 1rem;
+    color: white;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 30px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .footer {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .footer-top {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    background-color: #fff;
+    color: #000;
+  }
+  
+  .feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    max-width: 300px;
+  }
+  
+  .feature img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .feature h3 {
+    margin: 0;
+    font-size: 20px;
+  }
+  
+  .feature p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  
+  .footer-column {
+    flex: 1 1 200px;
+    margin: 10px 20px;
+  }
+  
+  .footer-column h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-column li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #ccc;
+  }
+  
+  .logo-section p {
+    font-size: 14px;
+    color: #ccc;
+    margin-top: 10px;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .logo img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .logo span {
+    font-size: 22px;
+    font-weight: 500;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .icon {
+    background: transparent;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .subscribe {
+    display: flex;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    overflow: hidden;
+    height: 45px;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .subscribe input {
+    flex: 1;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+  }
+  
+  .subscribe button {
+    background-color: #fff;
+    color: #000;
+    padding: 0 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  .footer-credit {
+    text-align: left;
+    padding: 20px;
+    font-size: 14px;
+    border-top: 1px dashed rgba(255,255,255,0.2);
+  }

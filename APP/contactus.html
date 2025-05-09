@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Section</title>
+  <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+    body {
+    font-family: 'Georgia', serif;
+    background-color: white;
+    color: black;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 80px;
+    border-bottom: 1px solid #ddd;
+    background-color: white;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .logo span {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ff6600;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #444;
+    font-weight: 400;
+    transition: 0.3s;
+  }
+  
+  .nav-links .active a {
+    color: #ff6600;
+    font-weight: 600;
+  }
+  
+  nav ul li a:hover, nav ul li a.active {
+      color: #ff6600;
+      font-style: bold;
+      font-weight: 600;
+    }
+
+    .contact-header {
+      text-align: center;
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 40px;
+    }
+
+    .contact-header span {
+      color: #ff6600;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+      padding: 50px 150px;
+
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .input-group {
+      display: flex;
+      gap: 20px;
+    }
+
+    .input-group input,
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+      min-height: 100px;
+      
+    }
+
+    .send-btn {
+      background-color: #ff6600;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 20px;
+      width: fit-content;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .send-btn:hover {
+      background-color: #ff6600;
+    }
+
+    .contact-image img {
+      width: 100%;
+      border-radius: 20px;
+      object-fit: cover;
+    }
+
+    .contact-info {
+      margin-top: 60px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .info-section {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .info-card {
+      background: #fff;
+      border: #b2b1b1 solid 1px;
+      border-radius: 20px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+      padding: 30px 20px;
+      text-align: center;
+      flex: 1;
+      min-width: 280px;
+      max-width: 320px;
+      transition: transform 0.3s ease;
+    }
+
+    .info-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .icon-circle {
+      width: 60px;
+      height: 60px;
+      background-color: #ff6600;
+      border-radius: 50%;
+      margin: 0 auto 20px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .icon-circle i {
+      color: #fff;
+      font-size: 24px;
+    }
+
+    .info-card h4 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #000;
+    }
+
+    .info-card p {
+      color: #555;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-info {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    .footer {
+    background-color: #000;
+    color: #fff;
+  }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  
+  .footer-column {
+    flex: 1 1 200px;
+    margin: 10px 20px;
+  }
+  
+  .footer-column h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-column li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #ccc;
+  }
+  
+  .logo-section p {
+    font-size: 14px;
+    color: #ccc;
+    margin-top: 10px;
+  }
+  
+  .logo2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .logo2 span {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .icon {
+    background: transparent;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .subscribe {
+    display: flex;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    overflow: hidden;
+    height: 45px;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .subscribe input {
+    flex: 1;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+  }
+  
+  .subscribe button {
+    background-color: #fff;
+    color: #000;
+    padding: 0 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  .footer-credit {
+    text-align: left;
+    padding: 20px;
+    font-size: 14px;
+    border-top: 1px dashed rgba(255,255,255,0.2);
+  }
+
+  </style>
+  
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+          <span>Casimo</span>
+        </div>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="aboutus.html">About us</a></li>
+            <li><a href="reservation.html">Reservation</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li class="active"><a href="contactus.html">Contact us</a></li>
+
+
+          </ul>
+        </nav>
+        
+      </header>
+      <br>
+      <br>
+  
+      <section class="contact-container">
+        <h2 class="contact-header">Get in <span>Touch with Us</span></h2>
+    
+        <div class="contact-grid">
+          <form class="contact-form" id="contactForm">
+            <div class="input-group">
+              <input type="text" placeholder="First Name" required />
+              <input type="text" placeholder="Last Name" required />
+            </div>
+            <div class="input-group">
+              <input type="email" placeholder="Email" required />
+              <input type="tel" placeholder="Phone Number" required />
+            </div>
+            <input type="text" placeholder="Subject" required />
+            <textarea placeholder="Enter your message..." required></textarea>
+            <button class="send-btn" type="submit">Send a Message</button>
+          </form>
+    
+
+      <div class="contact-image">
+        <img src="restuarant 4.webp" alt="Contact image"/>
+      </div>
+    </div>
+    </div>
+</div>
+    <br>
+    <br>
+    <br>
+
+    <div class="info-section">
+        <div class="info-card">
+          <div class="icon-circle">
+<img src="location.png" alt="Address" width="34" height="34" />
+          </div>
+          <h4>Address</h4>
+          <p>12, paud rd. Downtown, New India 45463</p>
+        </div>
+    
+        <div class="info-card">
+          <div class="icon-circle">
+            <img src="phone-call.png" alt="phone" width="34" height="34" />
+          </div>
+          <h4>Phone</h4>
+          <p>+0123-456-789</p>
+        </div>
+    
+        <div class="info-card">
+          <div class="icon-circle">
+            <img src="mail.png" alt="mail" width="34" height="34" />
+          </div>
+          <h4>Email</h4>
+          <p>casimo@gmail.com</p>
+        </div>
+      </div>
+    </div>
+<br>
+<br>    
+<br>
+</body>
+
+</section>
+<footer class="footer">
+  <div class="footer-bottom">
+      <div class="footer-column logo-section">
+        <div class="logo2">
+          <span>Casimo</span>
+        </div>
+        <p>We are dedicated to crafting memorable dining experiences that indulge the senses and delight the palate explore. our restaurant blends charm, modern elegance with a passion for Italian cuisine flavors whether you're joining us for a casual lunch or a celebration with friends, our team is committed to your visit is nothing short of exceptional.</p>
+      </div>
+  
+      <div class="footer-column">
+        <h4>Pages</h4>
+        <ul>
+          <li>Home</li>
+          <li>Menu</li>
+          <li>Order online</li>
+          <li>Catering</li>
+          <li>Reservation</li>
+        </ul>
+      </div>
+  
+      <div class="footer-column">
+        <h4>Information</h4>
+        <ul>
+          <li>About us</li>
+          <li>Testimonials</li>
+          <li>Event</li>
+        </ul>
+      </div>
+  
+      <div class="footer-column">
+        <h4>Get in touch</h4>
+        <div class="social-icons">
+          <span class="icon"><img src="facebook-logo.png" alt="facebook"></span>
+          <span class="icon"><img src="instagram.png" alt="insta"></span>
+          <span class="icon"><img src="social-media.png" alt="twitter"></span>
+        </div>
+        <div class="subscribe">
+          <input type="email" placeholder="Enter email address">
+          <button>Subscribe</button>
+        </div>
+      </div>
+    </div>
+  
+    <div class="footer-credit">
+      <p>@Rishika Jain</p>
+    </div>
+  </footer>
+
+  <script src="contactus.js"></script>
+
+</body>
+</html>
+
+
